@@ -1,6 +1,6 @@
-// docs/docusaurus.config.ts
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+// docusaurus.config.ts
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
@@ -8,29 +8,24 @@ const config: Config = {
   tagline: 'Bridging the gap between the digital brain and the physical body',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
   url: 'https://github.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  organizationName: 'Ishtiaq Khan',
+  organizationName: 'ishtiaqkhan263',
   projectName: 'physical-ai-and-humanoid-robotics',
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
 
-  // Custom fields for API configuration (used in your hooks)
   customFields: {
-    apiUrl: process.env.REACT_APP_API_URL || 'https://ai-rative-book-backend-production.up.railway.app',
+    apiUrl:
+      process.env.REACT_APP_API_URL ||
+      'https://ai-rative-book-backend-production.up.railway.app',
     apiKey: process.env.REACT_APP_API_KEY || '',
   },
 
@@ -40,26 +35,22 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
           editUrl: 'https://github.com/ishtiaqkhan263',
         },
-        blog: false, // Blog disabled as per textbook structure
+        blog: false,
         theme: {
-          customCss: './src/css/custom.css', // Points to your new Modern Theme
+          customCss: './src/css/custom.css',
         },
       } satisfies Preset.Options,
     ],
   ],
 
   themeConfig: {
-    // Replace with your project's social card
     image: 'img/social-card.jpg',
-    
-    // We handle dark mode toggle in the UserProfileButton, 
-    // but we keep respectPrefersColorScheme true
+
     colorMode: {
       defaultMode: 'light',
-      disableSwitch: true, 
+      disableSwitch: true,
       respectPrefersColorScheme: true,
     },
 
@@ -67,8 +58,7 @@ const config: Config = {
       title: 'Physical AI',
       logo: {
         alt: 'Physical AI Logo',
-        // Yahan humne naya logo link kar diya hai
-        src: 'img/ai-logo.svg', 
+        src: 'img/ai-logo.svg',
       },
       items: [
         {
@@ -100,7 +90,6 @@ const config: Config = {
             },
           ],
         },
-        // GitHub link is handled via CSS in your custom theme or can be added here
         {
           href: 'https://github.com/ishtiaqkhan263',
           label: 'GitHub',
@@ -108,8 +97,9 @@ const config: Config = {
         },
       ],
     },
+
     footer: {
-      style: 'light', // Matches your modern theme better
+      style: 'light',
       links: [
         {
           title: 'Course Material',
@@ -128,12 +118,12 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Ishitaq GitHub',
-              href: 'https://github.com/ishtiaqkhan263,
+              label: 'Ishtiaq GitHub',
+              href: 'https://github.com/ishtiaqkhan263',
             },
             {
               label: 'LinkedIn',
-              href: 'www.linkedin.com/in/ishtiaq-khan2603',
+              href: 'https://www.linkedin.com/in/ishtiaq-khan2603',
             },
           ],
         },
@@ -149,10 +139,12 @@ const config: Config = {
       ],
       copyright: `© ${new Date().getFullYear()} Physical AI & Humanoid Robotics. Built with Docusaurus.`,
     },
+
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+
     tableOfContents: {
       minHeadingLevel: 2,
       maxHeadingLevel: 4,
